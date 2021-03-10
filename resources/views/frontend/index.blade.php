@@ -100,7 +100,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Trending Item</h2>
+                        <h2 style="color: #3e3e3e;">Các dòng trà ngon và nổi tiếng</h2>
                     </div>
                 </div>
             </div>
@@ -140,8 +140,10 @@
                                                     $photo=explode(',',$product->photo);
                                                 // dd($photo);
                                                 @endphp
-                                                <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                                                <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
+                                                {{-- <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
+                                                <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}"> --}}
+                                                <img class="default-img" src="https://media.loveitopcdn.com/1229/thumb/243x243/tra-dinh-thai-nguyen-loc-tan-cuong-7.jpg?zc=1" alt="https://media.loveitopcdn.com/1229/thumb/243x243/tra-dinh-thai-nguyen-loc-tan-cuong-7.jpg?zc=1">
+                                                <img class="hover-img" src="https://media.loveitopcdn.com/1229/thumb/243x243/tra-dinh-thai-nguyen-loc-tan-cuong-7.jpg?zc=1" alt="https://media.loveitopcdn.com/1229/thumb/243x243/tra-dinh-thai-nguyen-loc-tan-cuong-7.jpg?zc=1">
                                                 @if($product->stock<=0)
                                                     <span class="out-of-stock">Sale out</span>
                                                 @elseif($product->condition=='new')
@@ -156,11 +158,11 @@
                                             </a>
                                             <div class="button-head">
                                                 <div class="product-action">
-                                                    <a data-toggle="modal" data-target="#{{$product->id}}" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                                    <a data-toggle="modal" data-target="#{{$product->id}}" title="Quick View" href="#"><i class=" ti-eye"></i><span>Xem nhanh</span></a>
                                                     <a title="Wishlist" href="{{route('add-to-wishlist',$product->slug)}}" ><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
                                                 </div>
                                                 <div class="product-action-2">
-                                                    <a title="Add to cart" href="{{route('add-to-cart',$product->slug)}}">Add to cart</a>
+                                                    <a title="Thêm vào giỏ" href="{{route('add-to-cart',$product->slug)}}">Thêm vào giỏ</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -194,12 +196,12 @@
     $featured=DB::table('products')->where('is_featured',1)->where('status','active')->orderBy('id','DESC')->limit(1)->get();
 @endphp --}}
 <!-- Start Midium Banner  -->
-<section class="midium-banner">
+{{-- <section class="midium-banner">
     <div class="container">
         <div class="row">
             @if($featured)
                 @foreach($featured as $data)
-                    <!-- Single Banner  -->
+               
                     <div class="col-lg-6 col-md-6 col-12">
                         <div class="single-banner">
                             @php 
@@ -213,16 +215,16 @@
                             </div>
                         </div>
                     </div>
-                    <!-- /End Single Banner  -->
+                  
                 @endforeach
             @endif
         </div>
     </div>
-</section>
+</section> --}}
 <!-- End Midium Banner -->
 
 <!-- Start Most Popular -->
-<div class="product-area most-popular section">
+{{-- <div class="product-area most-popular section">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -236,25 +238,25 @@
                 <div class="owl-carousel popular-slider">
                     @foreach($product_lists as $product)
                         @if($product->condition=='hot')
-                            <!-- Start Single Product -->
+                            <
                         <div class="single-product">
                             <div class="product-img">
                                 <a href="{{route('product-detail',$product->slug)}}">
                                     @php 
                                         $photo=explode(',',$product->photo);
-                                    // dd($photo);
+                                
                                     @endphp
                                     <img class="default-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                     <img class="hover-img" src="{{$photo[0]}}" alt="{{$photo[0]}}">
-                                    {{-- <span class="out-of-stock">Hot</span> --}}
+                                  
                                 </a>
                                 <div class="button-head">
                                     <div class="product-action">
-                                        <a data-toggle="modal" data-target="#{{$product->id}}" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                        <a data-toggle="modal" data-target="#{{$product->id}}" title="Quick View" href="#"><i class=" ti-eye"></i><span>Xem nhanh</span></a>
                                         <a title="Wishlist" href="{{route('add-to-wishlist',$product->slug)}}" ><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
                                     </div>
                                     <div class="product-action-2">
-                                        <a href="{{route('add-to-cart',$product->slug)}}">Add to cart</a>
+                                        <a href="{{route('add-to-cart',$product->slug)}}">Thêm vào giỏ</a>
                                     </div>
                                 </div>
                             </div>
@@ -269,18 +271,18 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- End Single Product -->
+                        
                         @endif
                     @endforeach
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- End Most Popular Area -->
 
 <!-- Start Shop Home List  -->
-<section class="shop-home-list section">
+{{-- <section class="shop-home-list section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-12">
@@ -297,14 +299,14 @@
                     @endphp
                     @foreach($product_lists as $product)
                         <div class="col-md-4">
-                            <!-- Start Single List  -->
+                      
                             <div class="single-list">
                                 <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="list-image overlay">
                                         @php 
                                             $photo=explode(',',$product->photo);
-                                            // dd($photo);
+                                  
                                         @endphp
                                         <img src="{{$photo[0]}}" alt="{{$photo[0]}}">
                                         <a href="{{route('add-to-cart',$product->slug)}}" class="buy"><i class="fa fa-shopping-bag"></i></a>
@@ -318,7 +320,7 @@
                                 </div>
                                 </div>
                             </div>
-                            <!-- End Single List  -->
+                   
                         </div>
                     @endforeach
 
@@ -326,7 +328,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- End Shop Home List  -->
 {{-- @foreach($featured as $data)
     <!-- Start Cowndown Area -->
@@ -365,13 +367,60 @@
     </section>
     <!-- /End Cowndown Area -->
 @endforeach --}}
+
+
+<!-- Start Shop Services Area -->
+<section class="shop-services section home">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="ti-truck"></i>
+                    <h4>Miễn phí giao hàng</h4>
+                    <p>Với đơn hàng trên 500k</p>
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="ti-reload"></i>
+                    <h4>Miễn phí đổi trả</h4>
+                    <p>Trong vòng 30 ngày</p>
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="ti-money"></i>
+                    <h4>Đảm bảo giá thành</h4>
+                    <p>Cam kết giá rẻ nhất</p>
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="ti-tag"></i>
+                    <h4>Đảm bảo chất lượng</h4>
+                    <p>Nguyên liệu sạch, đúng chuẩn</p>
+                </div>
+                <!-- End Single Service -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Shop Services Area -->
+
 <!-- Start Shop Blog  -->
 <section class="shop-blog section">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h2>From Our Blog</h2>
+                    <h2>Kiến thức về trà</h2>
                 </div>
             </div>
         </div>
@@ -381,7 +430,8 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <!-- Start Single Blog  -->
                         <div class="shop-single-blog">
-                            <img src="{{$post->photo}}" alt="{{$post->photo}}">
+                            {{-- <img src="{{$post->photo}}" alt="{{$post->photo}}"> --}}
+                            <img src="https://media.loveitopcdn.com/1229/hanh-trinh-tim-den-nhung-chen-tra-thai-nguyen-sach-nguyen-chat.jpg" alt="https://media.loveitopcdn.com/1229/hanh-trinh-tim-den-nhung-chen-tra-thai-nguyen-sach-nguyen-chat.jpg">
                             <div class="content">
                                 <p class="date">{{$post->created_at->format('d M , Y. D')}}</p>
                                 <a href="{{route('blog.detail',$post->slug)}}" class="title">{{$post->title}}</a>
@@ -398,52 +448,7 @@
 </section>
 <!-- End Shop Blog  -->
 
-<!-- Start Shop Services Area -->
-<section class="shop-services section home">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="ti-rocket"></i>
-                    <h4>Free shiping</h4>
-                    <p>Orders over $100</p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="ti-reload"></i>
-                    <h4>Free Return</h4>
-                    <p>Within 30 days returns</p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="ti-lock"></i>
-                    <h4>Sucure Payment</h4>
-                    <p>100% secure payment</p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="ti-tag"></i>
-                    <h4>Best Peice</h4>
-                    <p>Guaranteed price</p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Shop Services Area -->
-
-@include('frontend.layouts.newsletter')
+{{-- @include('frontend.layouts.newsletter') --}}
 
 <!-- Modal -->
 @if($product_lists)
@@ -561,7 +566,7 @@
                                                 <!--/ End Input Order -->
                                             </div>
                                             <div class="add-to-cart">
-                                                <button type="submit" class="btn">Add to cart</button>
+                                                <button type="submit" class="btn">Thêm vào giỏ</button>
                                                 <a href="{{route('add-to-wishlist',$product->slug)}}" class="btn min"><i class="ti-heart"></i></a>
                                             </div>
                                         </form>
@@ -606,7 +611,7 @@
         font-size: 50px;
         font-weight: bold;
         line-height: 100%;
-        color: #F7941D;
+        color: #44a649;
         }
 
         #Gslider .carousel-inner .carousel-caption p {

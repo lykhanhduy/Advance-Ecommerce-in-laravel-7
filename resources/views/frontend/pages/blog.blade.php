@@ -26,10 +26,19 @@
             <div class="row">
                 <div class="col-lg-8 col-12">
                     <div class="row">
+                        <div style="background: #ccc" class="col-lg-8 col-md-8 col-12">
+                            <div ></div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        </div>
+                    </div>
+                    {{-- <div class="row">
                         @foreach($posts as $post)
-                        {{-- {{$post}} --}}
                             <div class="col-lg-6 col-md-6 col-12">
-                                <!-- Start Single Blog  -->
                                 <div class="shop-single-blog">
                                 <img src="{{$post->photo}}" alt="{{$post->photo}}">
                                     <div class="content">
@@ -53,27 +62,25 @@
                                         <a href="{{route('blog.detail',$post->slug)}}" class="more-btn">Continue Reading</a>
                                     </div>
                                 </div>
-                                <!-- End Single Blog  -->
                             </div>
                         @endforeach
                         <div class="col-12">
                             <!-- Pagination -->
                             {{-- {{$posts->appends($_GET)->links()}} --}}
                             <!--/ End Pagination -->
-                        </div>
-                    </div>
+                        {{-- </div>
+                    </div> --}}
                 </div>
                 <div class="col-lg-4 col-12">
                     <div class="main-sidebar">
-                        <!-- Single Widget -->
-                        <div class="single-widget search">
+
+                        {{-- <div class="single-widget search">
                             <form class="form" method="GET" action="{{route('blog.search')}}">
                                 <input type="text" placeholder="Search Here..." name="search">
                                 <button class="button" type="sumbit"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
-                        <!--/ End Single Widget -->
-                        <!-- Single Widget -->
+
                         <div class="single-widget category">
                             <h3 class="title">Blog Categories</h3>
                             <ul class="categor-list">
@@ -84,7 +91,7 @@
                                 @endif
                             <form action="{{route('blog.filter')}}" method="POST">
                                     @csrf
-                                    {{-- {{count(Helper::postCategoryList())}} --}}
+
                                     @foreach(Helper::postCategoryList('posts') as $cat)
                                     <li>
                                         <a href="{{route('blog.category',$cat->slug)}}">{{$cat->title}} </a>
@@ -94,12 +101,11 @@
                                 
                             </ul>
                         </div>
-                        <!--/ End Single Widget -->
-                        <!-- Single Widget -->
+    
                         <div class="single-widget recent-post">
                             <h3 class="title">Recent post</h3>
                             @foreach($recent_posts as $post)
-                                <!-- Single Post -->
+  
                                 <div class="single-post">
                                     <div class="image">
                                         <img src="{{$post->photo}}" alt="{{$post->photo}}">
@@ -123,13 +129,10 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <!-- End Single Post -->
+
                             @endforeach
                         </div>
-                        <!--/ End Single Widget -->
-                        <!-- Single Widget -->
-                        <!--/ End Single Widget -->
-                        <!-- Single Widget -->
+
                         <div class="single-widget side-tags">
                             <h3 class="title">Tags</h3>
                             <ul class="tag">
@@ -150,8 +153,7 @@
                                 </form>
                             </ul>
                         </div>
-                        <!--/ End Single Widget -->
-                        <!-- Single Widget -->
+
                         <div class="single-widget newsletter">
                             <h3 class="title">Newslatter</h3>
                             <div class="letter-inner">
@@ -162,8 +164,8 @@
                                     <button type="submit" class="btn " style="width: 100%">Submit</button>
                                 </form>
                             </div>
-                        </div>
-                        <!--/ End Single Widget -->
+                        </div> --}}
+
                     </div>
                 </div>
             </div>

@@ -403,7 +403,7 @@ Version:1.0
 	display:none;
 }
 .slicknav_nav li:hover a{
-	color:#F7941D;
+	color:#44a649;
 	background:transparent;
 }
 .slicknav_nav li:hover{
@@ -417,7 +417,7 @@ Version:1.0
 	background:transparent;
 }
 .slicknav_nav li .dropdown li a:hover{
-	color:#F7941D;
+	color:#44a649;
 	background:transparent;
 }
 .slicknav_nav li .slicknav_item{
@@ -433,12 +433,12 @@ Version:1.0
 	padding-bottom:0px;
 }
 .slicknav_menu .slicknav_icon-bar {
-	background-color: #F7941D;
+	background-color: #44a649;
 	box-shadow: none;
 	text-shadow: none;
 }
 .slicknav_nav .slicknav_arrow{
-	color:#F7941D;
+	color:#44a649;
 }
 .slicknav_menu .slicknav_icon-bar {
 	display: block;
@@ -786,6 +786,7 @@ Version:1.0
 	top: 0;
 	left: 50%;
 	margin-left:-20px;
+	color: #44a649;
 }
 .shop-services.home {
 	padding: 25px 0;
@@ -884,7 +885,7 @@ Version:1.0
 	width: 50%;
 	height: 100%;
 	border-bottom: 1px solid #e6ebee;
-	background: #F7941D;
+	background: #44a649;
 	color: #fff;
 	border: none;
 }
@@ -1116,7 +1117,7 @@ Version:1.0
 	display:none;
 }
 .slicknav_nav li:hover a{
-	color:#F7941D;
+	color:#44a649;
 	background:transparent;
 }
 .slicknav_nav li:hover{
@@ -1130,7 +1131,7 @@ Version:1.0
 	background:transparent;
 }
 .slicknav_nav li .dropdown li a:hover{
-	color:#F7941D;
+	color:#44a649;
 	background:transparent;
 }
 .slicknav_nav li .slicknav_item{
@@ -1146,12 +1147,12 @@ Version:1.0
 	padding-bottom:0px;
 }
 .slicknav_menu .slicknav_icon-bar {
-	background-color: #F7941D;
+	background-color: #44a649;
 	box-shadow: none;
 	text-shadow: none;
 }
 .slicknav_nav .slicknav_arrow{
-	color:#F7941D;
+	color:#44a649;
 }
 .slicknav_menu .slicknav_icon-bar {
 	display: block;
@@ -1389,6 +1390,7 @@ Version:1.0
 	top: 0;
 	left: 50%;
 	margin-left:-20px;
+	color: #44a649;
 }
 .shop-services.home {
 	padding: 25px 0;

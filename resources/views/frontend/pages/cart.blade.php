@@ -316,7 +316,7 @@
 										<!--/ End Input Order -->
 									</div>
 									<div class="add-to-cart">
-										<a href="#" class="btn">Add to cart</a>
+										<a href="#" class="btn">Thêm vào giỏ</a>
 										<a href="#" class="btn min"><i class="ti-heart"></i></a>
 										<a href="#" class="btn min"><i class="fa fa-compress"></i></a>
 									</div>
@@ -374,7 +374,7 @@
 			margin-bottom:0 !important;
 		}
 		.list li:hover{
-			background:#F7941D !important;
+			background:#44a649 !important;
 			color:white !important;
 		}
 		.form-select .nice-select::after {
